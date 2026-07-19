@@ -1,0 +1,62 @@
+name: 问题反馈 / Bug Report
+description: 反馈翻译错误、排版问题或资源包无法加载等问题
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量完整填写以下信息，方便我们快速定位问题。
+
+  - type: input
+    id: game-version
+    attributes:
+      label: 游戏版本
+      description: 你使用的 Minecraft 版本
+      placeholder: 例如：1.21.1
+    validations:
+      required: true
+
+  - type: input
+    id: mod-version
+    attributes:
+      label: 模组版本
+      description: 相关模组的版本号（以及必要时的加载器 Forge / NeoForge / Fabric 版本）
+      placeholder: 例如：AE2WTLib 19.5.0 / NeoForge 21.1.235
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 遇到了什么问题
+      description: 请描述你遇到的问题，以及期望的正确表现
+      placeholder: 在哪一篇指南、哪一段出现了什么问题……
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图
+      description: 如果方便，请附上问题的截图（可直接把图片拖入此处上传）
+      placeholder: 把截图拖拽到这里……
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志
+      description: 如涉及资源包无法加载等问题，请附上游戏日志（latest.log），会自动渲染为代码块
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: 其他补充
+      description: 其他任何有助于我们理解问题的信息
+    validations:
+      required: false
