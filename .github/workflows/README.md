@@ -57,11 +57,11 @@ git push origin v1.0.0-beta.1
 
 1. 检出该 Tag 指向的提交
 2. 将 `VERSION` 设置为 Tag 名，例如 `v1.0.0`
-3. 在工作流中直接将资源包文件打包为 ZIP
-4. 生成 `Cinderworks_TranslatePack-${VERSION}.zip`
-5. 将 ZIP 上传为该次 Actions 运行的 Artifact
+3. 在工作流中生成 `Cinderworks_TranslatePack-${VERSION}.zip`，用于 Release 附件
+4. 将资源包原始内容直接上传为 Actions Artifact
+5. GitHub 下载 Artifact 时生成的 ZIP 本身就是资源包，不会嵌套另一个 ZIP
 6. 创建对应的 GitHub Release，并自动生成 Release Notes
-7. 将 ZIP 上传为 Release 附件
+7. 将预先生成的 ZIP 上传为 Release 附件
 8. 如果 Tag 包含 `-`，将 Release 标记为预发布版本；否则创建正式版本
 
 ```text
@@ -69,9 +69,9 @@ git push origin v1.0.0-beta.1
     ↓
 检出 Tag 对应提交
     ↓
-在工作流中直接打包
+生成 Release 附件 ZIP
     ↓
-上传 Actions Artifact
+将资源包内容直接上传为 Actions Artifact
     ↓
 创建 GitHub Release
     ↓
@@ -87,8 +87,9 @@ git push origin v1.0.0-beta.1
 - 可以选择需要构建的分支
 - 工作流会检出所选分支的最新提交
 - `VERSION` 为 `dev`
-- 生成 `Cinderworks_TranslatePack-dev.zip`
-- ZIP 会上传为 Actions Artifact
+- 不会预先生成资源包 ZIP
+- 资源包原始内容会直接上传为名为 `Cinderworks_TranslatePack-dev` 的 Actions Artifact
+- 从 Actions 页面下载的 `Cinderworks_TranslatePack-dev.zip` 本身就是资源包，不会嵌套另一个 ZIP
 - 不会创建 GitHub Release
 - 不会创建 Tag
 - 不会修改已有 Release
@@ -99,11 +100,7 @@ git push origin v1.0.0-beta.1
     ↓
 检出所选分支的最新提交
     ↓
-在工作流中直接打包
-    ↓
-生成 Cinderworks_TranslatePack-dev.zip
-    ↓
-上传 Actions Artifact
+将资源包内容直接上传为 Actions Artifact
     ↓
 跳过创建 GitHub Release
 ```
