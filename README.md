@@ -52,7 +52,7 @@ Compress-Archive -Path assets, pack.mcmeta -DestinationPath Cinderworks_Translat
 
 ## 引用说明
 
-整合包图标来自于 [Pixiv 二象性冰淇淋](https://www.pixiv.net/artworks/129136484)
+资源包图标来自于 [Pixiv 二象性冰淇淋](https://www.pixiv.net/artworks/129136484)
 
 ## 许可协议
 
