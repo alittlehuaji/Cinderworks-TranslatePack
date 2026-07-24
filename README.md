@@ -28,7 +28,10 @@ Cinderworks_TranslatePack.zip
 
 ```bash
 # Linux / macOS
-zip -r Cinderworks_TranslatePack.zip assets pack.mcmeta
+./build.sh
+
+# 可选：指定输出文件名
+./build.sh Cinderworks_TranslatePack-custom.zip
 ```
 
 ```powershell
