@@ -41,7 +41,7 @@ jobs:
             echo "valid_tag=false" >> "$GITHUB_OUTPUT"
           fi
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
-          echo "zipname=HappyMC_Cinderworks_TranslatePack-${VERSION}.zip" >> "$GITHUB_OUTPUT"
+          echo "zipname=Cinderworks_TranslatePack-${VERSION}.zip" >> "$GITHUB_OUTPUT"
 
       - name: 打包资源包
         run: |
@@ -52,7 +52,7 @@ jobs:
       - name: 上传构建产物
         uses: actions/upload-artifact@v4
         with:
-          name: HappyMC_Cinderworks_TranslatePack-${{ steps.vars.outputs.version }}
+          name: Cinderworks_TranslatePack-${{ steps.vars.outputs.version }}
           path: ${{ steps.vars.outputs.zipname }}
 
       - name: 创建 Release 并上传 zip

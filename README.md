@@ -1,4 +1,4 @@
-# HappyMC Cinderworks 汉化包
+# Cinderworks | 汉化包
 
 [![Action](../../actions/workflows/release.yml/badge.svg)](../../actions/workflows/release.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
@@ -9,7 +9,7 @@
 
 ### 方式一：直接下载（推荐）
 
-前往仓库的 **[Releases](../../releases/latest)** 页面，下载最新版的 `HappyMC_Cinderworks_TranslatePack-*.zip`，即可跳过下面的打包步骤，直接进行[安装](#安装)
+前往仓库的 **[Releases](../../releases/latest)** 页面，下载最新版的 `Cinderworks_TranslatePack-*.zip`，即可跳过下面的打包步骤，直接进行[安装](#安装)
 
 > Release 中的 zip 由 GitHub Actions 自动打包，结构已经符合要求，下载后无需解压即可使用
 
@@ -18,7 +18,7 @@
 将 `assets` 文件夹连同 `pack.mcmeta`（见下）一起压缩成一个 `.zip` 文件。**注意：压缩包内的第一层必须直接是 `assets/` 和 `pack.mcmeta`，而不是再套一层项目文件夹。**
 
 ```
-HappyMC_Cinderworks_TranslatePack.zip
+Cinderworks_TranslatePack.zip
 ├── assets/
 │   └── xxx
 └── pack.mcmeta
@@ -28,12 +28,12 @@ HappyMC_Cinderworks_TranslatePack.zip
 
 ```bash
 # Linux / macOS
-zip -r HappyMC_Cinderworks_TranslatePack.zip assets pack.mcmeta
+zip -r Cinderworks_TranslatePack.zip assets pack.mcmeta
 ```
 
 ```powershell
 # Windows PowerShell
-Compress-Archive -Path assets, pack.mcmeta -DestinationPath HappyMC_Cinderworks_TranslatePack.zip
+Compress-Archive -Path assets, pack.mcmeta -DestinationPath Cinderworks_TranslatePack.zip
 ```
 
 ### 安装
