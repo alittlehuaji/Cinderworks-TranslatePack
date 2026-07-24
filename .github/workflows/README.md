@@ -57,7 +57,7 @@ git push origin v1.0.0-beta.1
 
 1. 检出该 Tag 指向的提交
 2. 将 `VERSION` 设置为 Tag 名，例如 `v1.0.0`
-3. 调用仓库根目录的 `build.sh` 构建资源包
+3. 在工作流中直接将资源包文件打包为 ZIP
 4. 生成 `Cinderworks_TranslatePack-${VERSION}.zip`
 5. 将 ZIP 上传为该次 Actions 运行的 Artifact
 6. 创建对应的 GitHub Release，并自动生成 Release Notes
@@ -69,7 +69,7 @@ git push origin v1.0.0-beta.1
     ↓
 检出 Tag 对应提交
     ↓
-调用 build.sh 打包
+在工作流中直接打包
     ↓
 上传 Actions Artifact
     ↓
@@ -99,7 +99,7 @@ git push origin v1.0.0-beta.1
     ↓
 检出所选分支的最新提交
     ↓
-调用 build.sh 打包
+在工作流中直接打包
     ↓
 生成 Cinderworks_TranslatePack-dev.zip
     ↓
