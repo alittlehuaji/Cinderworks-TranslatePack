@@ -50,6 +50,10 @@ Compress-Archive -Path assets, pack.mcmeta -DestinationPath Cinderworks_Translat
 
 提交时请尽量按照 issue 模板填写游戏版本、模组版本、问题描述、截图和日志，方便我们更快定位问题。也欢迎直接提交 Pull Request 帮助改进翻译
 
+## 引用说明
+
+整合包图标来自于 [Pixiv 二象性冰淇淋](https://www.pixiv.net/artworks/129136484)
+
 ## 许可协议
 
 本项目基于 [MIT License](./LICENSE) 开源。你可以自由使用、修改和分发，但请保留原始的版权与许可声明
