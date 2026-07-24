@@ -84,10 +84,29 @@ git push origin v1.0.0-beta.1
 
 手动运行时：
 
+- 可以选择需要构建的分支
+- 工作流会检出所选分支的最新提交
 - `VERSION` 为 `dev`
 - 生成 `Cinderworks_TranslatePack-dev.zip`
 - ZIP 会上传为 Actions Artifact
 - 不会创建 GitHub Release
+- 不会创建 Tag
+- 不会修改已有 Release
+- 不会向仓库提交任何文件
+
+```text
+点击 Run workflow 并选择分支
+    ↓
+检出所选分支的最新提交
+    ↓
+调用 build.sh 打包
+    ↓
+生成 Cinderworks_TranslatePack-dev.zip
+    ↓
+上传 Actions Artifact
+    ↓
+跳过创建 GitHub Release
+```
 
 ## 版本号建议
 
