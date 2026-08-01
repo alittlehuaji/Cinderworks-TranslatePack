@@ -30,7 +30,7 @@ jobs:
       - name: 打包 Release 资源包
         if: github.ref_type == 'tag'
         run: |
-          zip -r "${PACK_NAME}-${VERSION}.zip" \
+          zip -r "${PACK_NAME}.zip" \
             README.md pack.png pack.mcmeta LICENSE assets
 
       - name: 上传构建产物
@@ -48,6 +48,6 @@ jobs:
         if: github.ref_type == 'tag'
         uses: softprops/action-gh-release@v2
         with:
-          files: ${{ env.PACK_NAME }}-${{ env.VERSION }}.zip
+          files: ${{ env.PACK_NAME }}.zip
           generate_release_notes: true
           prerelease: ${{ contains(github.ref_name, '-') }}
